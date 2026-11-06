@@ -19,14 +19,16 @@
 <h1>Cómo la inteligencia artificial aprende, busca información y cambia su entrenamiento</h1>
 <p class="pregunta">¿De qué manera la IA aprende a partir de datos, usa información externa para responder mejor y modifica el entrenamiento de sus modelos para adaptarse a nuevas tareas?</p>
 <p><strong>Propósito:</strong> entender cómo funcionan estos sistemas y por qué, aun así, pueden equivocarse con seguridad, para aprender a usarlos como apoyo y no como autoridad.</p>
-<p>Gabriel Moreno · <!-- EDITAR: curso e institución -->[Curso / institución]</p>
+<p>Gabriel Moreno <!-- EDITAR: curso e institución --></p>
 </div></section>
 
 <!-- INVESTIGACIÓN: tres hallazgos con sus fuentes -->
 <section id="investigacion">
 <h2>Tres hallazgos</h2>
 <div class="box"><h3>1. La IA aprende encontrando patrones en datos</h3>
-<p>Los modelos se entrenan con muchos ejemplos y ajustan sus parámetros, los valores internos que les permiten predecir. En el aprendizaje profundo, el sistema extrae por sí mismo rasgos útiles de texto, imágenes y audio. Eso no significa que “entienda” como una persona.</p>
+<p>Los modelos se entrenan con muchos ejemplos y ajustan sus parámetros, los valores internos que les permiten predecir. 
+    En el aprendizaje profundo, el sistema extrae por sí mismo rasgos útiles de texto, imágenes y audio. 
+    Eso no significa que “entienda” como una persona.</p>
 <p class="src">Fuente: Janiesch, Zschech y Heinrich (2021), <a href="https://doi.org/10.1007/s12525-021-00475-2">Machine learning and deep learning</a>.</p></div>
 <div class="box"><h3>2. Buscar información externa mejora las respuestas, pero no las vuelve infalibles</h3>
 <p>Con RAG, el modelo recupera fragmentos de documentos y los usa para responder. Esto ayuda a actualizar conocimiento y a reducir respuestas inventadas, pero si la búsqueda trae datos pobres o irrelevantes, el error sigue ahí.</p>
@@ -40,10 +42,32 @@
 <section id="articulo">
 <h2>Artículo</h2>
 <details class="art" open><summary>Leer el texto completo</summary>
-<h3>Conclusión provisional</h3>
-<p>La evidencia sugiere que la inteligencia artificial aprende principalmente encontrando patrones en datos de entrenamiento, mejora mucho cuando reutiliza modelos ya preentrenados y gana precisión práctica cuando puede apoyarse en información externa en vez de responder solo con lo que guardó en sus parámetros. Al mismo tiempo, el campo se mueve hacia métodos de entrenamiento más eficientes, más adaptables y más guiados por preferencias humanas, porque entrenar modelos enormes desde cero es costoso y no siempre confiable.</p>
-<h3>Duda pendiente</h3>
-<p>Queda por aclarar hasta qué punto estos modelos realmente “aprenden” de forma general y confiable, y no solo combinan patrones, fragmentos de memoria y búsqueda externa de maneras que parecen correctas. También sigue abierta la pregunta de cómo hacerlos más transparentes, menos sesgados y menos propensos a errores en contextos donde una respuesta incorrecta puede tener consecuencias importantes.</p>
+<h3>Por Qué la IA Se Equivoca con Seguridad y Qué Tanto Ayuda RAG</h3>
+<p>
+ La IA se equivoca, y lo hace con mucha seguridad. En clase usamos cada vez más herramientas de inteligencia artificial para buscar información, resumir textos o responder preguntas, pero pocas veces pensamos en por qué a veces contestan con tanta confianza aunque estén equivocadas. Este texto está dirigido a mis compañeros y busca responder: ¿por qué la IA se equivoca de esa manera y cuánto ayuda la técnica RAG a reducir esos errores? Para responder, veremos cómo aprenden los modelos de lenguaje, qué problemas tienen y por qué buscar información externa mejora algunas respuestas, aunque no todas (Gao et al., 2023).
+<br><br>
+ Evidencia según la revisión de Gao et al. (2023), los modelos de lenguaje aprenden a partir de grandes cantidades de ejemplos y usan ese aprendizaje como conocimiento interno para responder. 
+
+Este sistema funciona bien en muchas tareas, pero falla cuando la pregunta exige información reciente, 
+conocimiento especializado o datos que quedaron mal representados durante el entrenamiento. Un problema
+ muy conocido es la alucinación: respuestas que suenan correctas, pero no tienen respaldo confiable (Gao et al., 2023). Además, 
+ estos modelos pueden dar resultados poco claros o difíciles de rastrear, lo que complica saber de dónde salió una afirmación 
+ (Gao et al., 2023).
+<br><br>
+
+RAG, o Retrieval-Augmented Generation (generación aumentada por recuperación), intenta reducir parte de este problema combinando el conocimiento interno del modelo con información de bases de datos externas. El sistema busca fragmentos de texto relacionados con la pregunta y los incorpora como contexto antes de generar la respuesta. Según la fuente, esta combinación tiende a mejorar la precisión y la credibilidad, sobre todo en tareas que dependen mucho del conocimiento y necesitan actualización constante (Gao et al., 2023).
+
+<br><br>
+Análisis. Lo importante de RAG es que cambia el tipo de error que puede cometer la IA. Sin RAG, el modelo depende de lo que aprendió en el entrenamiento. Con RAG, puede apoyarse en fuentes externas, pero eso no garantiza una respuesta correcta. Si la búsqueda trae fragmentos poco relevantes, incompletos o contradictorios, la respuesta final también se debilita. El problema no desaparece: se traslada a la calidad de la búsqueda, a cómo se elige el contexto y a cómo el modelo integra esa información (Gao et al., 2023).
+
+<br><br>
+Por eso, RAG no reemplaza el pensamiento crítico de quien usa la IA. Aunque reduce parte de las alucinaciones al consultar información externa, sigue siendo una tecnología en desarrollo, con retos en evaluación, robustez y diseño de sus componentes. En resumen, RAG ayuda, pero no vuelve infalible a la IA (Gao et al., 2023).
+<br><br>
+Propuesta. 
+
+Recomiendo usar la IA como apoyo, no como autoridad. Si una respuesta parece demasiado segura, conviene revisar si cita fuentes, si usa información actualizada y si distingue entre datos recuperados y texto generado por el modelo. En las tareas, también es útil comparar la respuesta de la IA con al menos una fuente académica u oficial antes de aceptarla. Así, en lugar de confiar ciegamente en la seguridad con que responde, aprendemos a evaluar mejor la calidad de la información. Es una acción simple que podemos aplicar desde la próxima tarea.
+</p>
+
 <h3>Bibliografía</h3>
 <ul>
 <li>Janiesch, C., Zschech, P. y Heinrich, K. (2021). Machine learning and deep learning. <a href="https://doi.org/10.1007/s12525-021-00475-2">doi.org/10.1007/s12525-021-00475-2</a></li>
@@ -63,8 +87,7 @@
 <!-- Botón que abre la presentación de Prezi en otra pestaña -->
 <p><a class="btn" href="https://prezi.com/page/28G1cJMD4yoHBq3LjELSn8/por-qu%C3%A9-la-ia-se-equivoca-con-seguridad" target="_blank" rel="noopener">Abrir la presentación en Prezi</a></p>
 <!-- Vista incrustada del mismo Prezi: se ve dentro de la página sin salir de ella -->
-<div class="frame"><iframe src="https://prezi.com/craft/embed/28G1cJMD4yoHBq3LjELSn8" title="Presentación en Prezi" allowfullscreen loading="lazy"></iframe></div>
-<p class="src">Si no ves la presentación aquí arriba, usa el botón “Abrir la presentación en Prezi”.</p>
+
 </section>
 
 <!-- VIDEO: botón con el enlace al video en Drive -->
@@ -72,13 +95,13 @@
 <h2>Video</h2>
 <!-- VIDEO: el archivo video.mp4 debe estar en la misma carpeta que este index.html -->
 <video controls preload="metadata" playsinline title="Video del proyecto">
-  <source src="img/Video_Sobre_IA_RAG.mp4" type="video/mp4">
+  <source src="img/eldefinitivo.mp4" type="video/mp4">
   Tu navegador no puede mostrar el video. Usa los enlaces de abajo.
 </video>
 <!-- Enlace directo al archivo: sirve para abrir el video solo, en otra pestaña -->
-<p><a class="btn" href="img/Video_Sobre_IA_RAG.mp4" target="_blank" rel="noopener">Abrir el video en otra pestaña</a>
+<p><a class="btn" href="img/eldefinitivo.mp4" target="_blank" rel="noopener">Abrir el video en otra pestaña</a>
 <!-- Respaldo: el mismo video en Google Drive -->
- · <a href="https://drive.google.com/file/d/13r-HX8Nhs5RWv_kQhUfZyvi3rxWlbNlF/view?usp=drivesdk" target="_blank" rel="noopener">Verlo en Google Drive</a></p>
+</p>
 </section>
 
 <!-- TRANSPARENCIA: IA usadas, aportes y verificaciones -->
@@ -86,13 +109,16 @@
 <h2>Transparencia</h2>
 <div class="box"><h3>IA utilizadas</h3>
 <ul>
-<li><strong>Consensus:</strong> búsqueda de artículos académicos para la investigación.</li>
-<li><strong>Prezi:</strong> diseño de la presentación.</li>
-<li><strong>Cursor, Replit y GitHub:</strong> editar, probar y guardar el código de esta página.</li>
-<li><strong>Claude (Anthropic):</strong> propuso la estructura y el código inicial del portafolio.</li>
+<li><strong>Consensus</strong> (investigación): la usé para buscar artículos académicos sobre aprendizaje automático, RAG y ajuste de modelos. Revisé los resultados, abrí los enlaces de las fuentes y me quedé con las que se relacionaban con mi pregunta de investigación.</li>
+<li><strong>Prezi</strong> (presentación): lo usé para armar la presentación “¿Por qué la IA se equivoca con seguridad?”. Yo definí la idea central, el orden de las diapositivas y qué información incluir.</li>
+<li><strong>CapCut IA y Descript</strong> (video): la usé para crear el video sobre RAG con apoyo de inteligencia artificial. Revisé el resultado y comprobé que explicara el tema de mi investigación.</li>
+<li><strong>Cursor</strong> (página web): lo usé como editor para modificar el código, corregir textos y probar la página en el navegador antes de publicarla.</li>
 </ul></div>
-<div class="box"><h3>Mis aportes</h3><p><!-- EDITAR --> Elegí el tema y la pregunta, seleccioné y organicé los hallazgos, y decidí el contenido de cada entregable. [Ajusta este texto con tus palabras.]</p></div>
-<div class="box"><h3>Qué verifiqué y cómo</h3><p><!-- EDITAR --> Abrí los enlaces de cada fuente, comprobé que sus ideas coincidieran con lo que escribí y probé que la página funcionara desde un enlace compartido. [Ajusta este texto con lo que realmente hiciste.]</p></div>
+
+</ul></div>
+<div class="box"><h3>Mis aportes</h3>
+<p>Elegí el tema porque considero importante saber de dónde viene la información que nos brinda la inteligencia artificial y por qué a veces se equivoca con seguridad. Definí la pregunta de investigación, seleccioné y organicé los tres hallazgos, y decidí enfocar el artículo y la presentación en RAG.</p>
+<p>En la página web decidí el estilo moderno y los colores acordes con el tema, reuní mis entregables (investigación, artículo, presentación y video), escribí los textos de esta sección y añadí mi video. Dividí el sitio en archivos HTML, CSS y JavaScript, y probé los enlaces y la reproducción del video en el navegador.</p></div>
 </section>
 
 <footer>Gabriel Moreno · Portafolio de investigación sobre inteligencia artificial</footer>
