@@ -37,3 +37,19 @@ footer{text-align:center;color:var(--muted);padding:32px 20px;font-size:14px}
 nav a.activo{background:rgba(255,255,255,.22)}
 /* Reproductor de video: ocupa todo el ancho y mantiene el formato 16:9 */
 video{width:100%;aspect-ratio:16/9;background:#000;border-radius:14px;border:1px solid var(--line)}
+/* ===== Encabezado centrado ===== */
+/* Centra todo el texto de la cabecera */
+.hero>div{text-align:center}
+
+/* Centra los párrafos, que tienen un ancho máximo y se quedaban pegados a la izquierda */
+.hero p{margin-left:auto;margin-right:auto}
+
+/* La pregunta tenía una raya a la izquierda; ahora lleva una arriba y otra abajo */
+.hero .pregunta{border-left:0;padding:14px 0;border-top:2px solid #38D5F5;border-bottom:2px solid #38D5F5}
+
+/* Centra también el menú de arriba (sin cortar enlaces en celular) */
+nav a:first-child{margin-left:auto}
+nav a:last-child{margin-right:auto}
+.art p {
+  text-align: justify;
+}
